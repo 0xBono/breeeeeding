@@ -3,11 +3,21 @@ import styles from './AwardCard.module.scss';
 
 const cx = classNames.bind(styles);
 
-export const AwardCard = () => {
+interface Props {
+  src: string;
+  title: string;
+}
+
+export const AwardCard: React.FC<Props> = ({ src, title }) => {
   return (
     <article className={cx('awardcard-wrap')}>
-      <img className={cx('awardcard-img')} src="/assets/temp_img.svg" alt="temp_image" />
-      <p className={cx('awardcard-title')}>Karen pryor ACADEMY Certification</p>
+      <img className={cx('awardcard-img')} src={src} alt="temp_image" />
+      <p className={cx('awardcard-title')}>{title}</p>
     </article>
   );
+};
+
+AwardCard.defaultProps = {
+  src: '/assets/temp_img.svg',
+  title: 'award-card title',
 };
