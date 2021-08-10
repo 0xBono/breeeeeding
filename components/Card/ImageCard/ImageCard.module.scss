@@ -1,0 +1,26 @@
+.imagecard-wrap {
+  max-width: 200px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.imagecard-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.imagecard-title {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #5f5f5f;
+}
+
+.small {
+  @extend .imagecard-img;
+  width: 160px;
+  height: 160px;
+  margin: 0;
+}
