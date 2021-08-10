@@ -1,0 +1,63 @@
+.realtime-reviewcard-wrap {
+  max-width: 492px;
+  height: 200px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #9f9f9f16;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.realtime-reviewcard-inner {
+  display: flex;
+  align-items: center;
+}
+
+.realtime-reviewcard-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 11px;
+}
+
+.realtime-reviewcard-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.realtime-reviewcard-kind {
+  margin-bottom: 12px;
+}
+
+.reviwer {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 16px;
+  color: #5f5f5f;
+}
+
+.reviwer-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.reviwer-content {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 16px;
+  color: #5f5f5f;
+
+  .realtime-reviewcard-cotent-inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.review-time {
+  font-size: 12px;
+  font-weight: 300;
+  color: #5f5f5f;
+}
