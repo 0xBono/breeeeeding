@@ -149,22 +149,31 @@
 }
 
 .class-section {
+  width: 100%;
+  max-width: 700px;
   margin: 64px 0;
+
+  .class-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px 0;
+    padding: 0 12px;
+  }
 
   .class-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 700px;
+    max-width: 100%;
     row-gap: 48px;
 
     @media (max-width: 768px) {
-      max-width: 430px;
+      max-width: 100%;
       grid-template-columns: repeat(2, 1fr);
       row-gap: 24px;
       column-gap: 24px;
     }
-    @media (min-width: 320px) and (max-width: 375px) {
-      max-width: 320px;
+    @media (min-width: 320px) and (max-width: 460px) {
+      max-width: 100%;
       grid-template-columns: repeat(1, 1fr);
     }
   }

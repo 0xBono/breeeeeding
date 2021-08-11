@@ -12,7 +12,7 @@ export const ImageCard: React.FC<Props> = ({ texthide, small }) => {
   return (
     <div className={cx('imagecard-wrap')}>
       <img className={cx('imagecard-img', { small })} src="/assets/temp_img.svg" alt="temp_image" />
-      {!texthide && <p className={cx('imagecard-title')}>입양준비와 초기🐶</p>}
+      {!texthide && <span className={cx('imagecard-title')}>입양준비와 초기🐶</span>}
     </div>
   );
 };

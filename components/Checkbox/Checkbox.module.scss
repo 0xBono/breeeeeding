@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  outline: 0;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input {
+  display: none;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #747474;
+  margin-bottom: 0 !important;
+  margin-right: 6px;
+}

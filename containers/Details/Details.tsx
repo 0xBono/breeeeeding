@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Badge, Overview, NavigationBar, Header } from 'components';
+import { Badge, Overview, NavigationBar, Header, Checkbox } from 'components';
 import { SelfCard, AwardCard, ImageCard, ReviewCard, RealTimeReviewCard } from 'components/Card';
 import { Prepare, Self, Class, Review } from './contents';
 import classNames from 'classnames/bind';
@@ -71,6 +71,10 @@ export const Details = () => {
                 <br />
                 함께하는 수업입니다!
               </p>
+              <div className={cx('class-checkbox')}>
+                <Checkbox content="화상 교육" />
+                <Checkbox content="방문 교육" />
+              </div>
               <div className={cx('class-inner')}>
                 {Class.map((item, key) => (
                   <ImageCard key={key} />
