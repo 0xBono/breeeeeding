@@ -1,1 +1,38 @@
-// Renewal
+.wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  // 영역 표시로 나눠 둔 보더
+  border: 1px solid #000;
+}
+
+.info-section {
+  width: 100%;
+  height: 500px;
+  // 영역 표시로 나눠 둔 보더
+  border: 1px solid #000;
+}
+
+.details-section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  .info-inner {
+    width: 100%;
+    height: 500px;
+    max-width: 700px;
+    background: #000;
+  }
+
+  .review-inner {
+    width: 100%;
+    height: 500px;
+    max-width: 495px;
+    background: #000;
+  }
+}
