@@ -5,10 +5,11 @@ import styles from './Overview.module.scss';
 const cx = classNames.bind(styles);
 
 interface Props {
+  title: string;
   content: string;
 }
 
-export const Overview: React.FC<Props> = ({ content }) => {
+export const Overview: React.FC<Props> = ({ title, content }) => {
   const [limit, setLimit] = useState(200);
 
   const toggleEllipsis = (str: string, limit: number) => {
@@ -28,12 +29,13 @@ export const Overview: React.FC<Props> = ({ content }) => {
 
   return (
     <div className={cx('wrap')}>
-      <p className={cx('overview-title')}>
-        안녕하세요.
-        <br />
-        마이콩 홍석민입니다.
+      <p
+        className={cx('overview-title')}
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+      <p className={cx('overview-content')}>
+        {toggleEllipsis(content, limit).string}
       </p>
-      <div className={cx('overview-content')}>{toggleEllipsis(content, limit).string}</div>
       {toggleEllipsis(content, limit).isShowMore ? (
         <button className={cx('more-button')} onClick={handleCollapse(content)}>
           더보기

@@ -1,3 +1,3 @@
-import { Details } from 'containers';
+import { Renewal } from 'containers';
 
-export default Details;
+export default Renewal;

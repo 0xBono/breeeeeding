@@ -3,13 +3,29 @@ import styles from './NavigationBar.module.scss';
 
 const cx = classNames.bind(styles);
 
-export const NavigationBar = () => {
+interface Props {
+  position: any;
+}
+
+export const NavigationBar: React.FC<Props> = ({ position }) => {
+  const menu = [
+    { id: 1, name: '선생님 스토리' },
+    { id: 2, name: '클래스 소개' },
+    { id: 3, name: '고객 후기' },
+  ];
   return (
     <nav className={cx('navigation-bar')}>
       <ul className={cx('navigation-bar-inner')}>
-        <li className={cx('navigation-bar-title', 'active')}>선생님 스토리</li>
-        <li className={cx('navigation-bar-title')}>클래스 소개</li>
-        <li className={cx('navigation-bar-title')}>고객 후기</li>
+        {menu.map((item, _) => (
+          <li
+            key={item.id}
+            className={cx('navigation-bar-title', {
+              active: item.id === position,
+            })}
+          >
+            {item.name}
+          </li>
+        ))}
       </ul>
     </nav>
   );
