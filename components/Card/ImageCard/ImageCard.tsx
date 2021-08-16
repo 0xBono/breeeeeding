@@ -6,14 +6,14 @@ const cx = classNames.bind(styles);
 
 interface Props {
   texthide?: boolean;
-  small?: boolean;
+  src?: string;
 }
 
-export const ImageCard: React.FC<Props> = ({ texthide, small }) => {
+export const ImageCard: React.FC<Props> = ({ texthide, src }) => {
   return (
     <div className={cx('imagecard-wrap')}>
       <Image
-        src="/assets/temp_img.svg"
+        src={src as any}
         alt="temp_image"
         layout="responsive"
         width={200}
@@ -24,4 +24,8 @@ export const ImageCard: React.FC<Props> = ({ texthide, small }) => {
       )}
     </div>
   );
+};
+
+ImageCard.defaultProps = {
+  src: '/assets/temp_img.svg',
 };
